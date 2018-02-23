@@ -21,6 +21,7 @@
 ## 业务层
 
 * [业务策略](business_strategy.md)
+* [流程](affair_manage.md)
 
 ## 前端
 
