@@ -22,6 +22,7 @@
 
 * [业务策略](business_strategy.md)
 * [流程](affair_manage.md)
+* [业务通知](business_notification.md)
 
 ## 前端
 
