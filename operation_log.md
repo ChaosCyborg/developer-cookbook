@@ -9,20 +9,19 @@
 
 ~~~xml
 <bean id="opLogInterceptor" class="cn.com.yunyoutianxia.auth.log.OperatorLogMethodInterceptor"></bean>
-	<aop:config>
-		<aop:pointcut id="controllerAndFunc"
-					  expression="(execution(* cn.com.yunyoutianxia.tour.business.controller..*.*(..)))" />
-		<aop:advisor advice-ref="opLogInterceptor" pointcut-ref="controllerAndFunc"></aop:advisor>
-	</aop:config>
+<aop:config>
+	<aop:pointcut id="controllerAndFunc" expression="(execution(* cn.com.yunyoutianxia.tour.business.controller..*.*(..)))" />
+	<aop:advisor advice-ref="opLogInterceptor" pointcut-ref="controllerAndFunc"></aop:advisor>
+</aop:config>
 ~~~
 
 2. 配置在`spring-base.xml`中：
 
 ~~~xml
 <bean class="cn.com.yunyoutianxia.auth.log.AliyunLogService">
-		<property name="accessKeyId" value="${aliyun.log.user.key.id}" />
-		<property name="accessKeySecret" value="${aliyun.log.user.key.secret}"/>
-	</bean>
+	<property name="accessKeyId" value="${aliyun.log.user.key.id}" />
+	<property name="accessKeySecret" value="${aliyun.log.user.key.secret}"/>
+</bean>
 
 ~~~
 
