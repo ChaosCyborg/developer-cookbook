@@ -5,7 +5,8 @@
 **模块中添加操作日志方法**
 模块提供操作日志记录支持需要添加一个controller拦截器和两个springBean
 
-配置在`mvc-dispatch-servlet.xml`中：
+1. 配置在`mvc-dispatch-servlet.xml`中：
+
 ~~~xml
 <bean id="opLogInterceptor" class="cn.com.yunyoutianxia.auth.log.OperatorLogMethodInterceptor"></bean>
 	<aop:config>
@@ -15,7 +16,7 @@
 	</aop:config>
 ~~~
 
-配置在`spring-base.xml`中：
+2. 配置在`spring-base.xml`中：
 
 ~~~xml
 <bean class="cn.com.yunyoutianxia.auth.log.AliyunLogService">
