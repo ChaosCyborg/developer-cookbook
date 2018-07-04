@@ -6,7 +6,7 @@
 
 ## 通用
 
-* [ID生成器](distribution_id.md)
+* [统一ID生成服务](distribution_id.md)
 * [装配策略](assemble_strategy.md)
 
 ## 权限
