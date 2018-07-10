@@ -31,7 +31,6 @@ length|Integer|ID长度|20
 minSkip|Integer|最小步长|1|
 maxSkip|Integer|最大步长；必须设置|无|
 
-
 >ID生成配置变更
 
 `void update(DidUpdateParam updateParam);`
@@ -66,3 +65,5 @@ maxSkip|Integer|最大步长修改值
 以map的形式返回不同类型的ID集合
 
 ##实现原理
+以0-9、A-Z、a-z这62个字符的顺序递增，递增到z进一位，能够表示的数值取决于设置的长度，假如长度为n，则能够表示的数值就是62的n次方。
+设置长度为6位就已经可以表示56800235584（五百多亿）个数值，默认值为20位，这个数量级足以满足长期的业务。
